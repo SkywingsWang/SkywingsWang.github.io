@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chase Race Game</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      background-color: #313335;
+      padding: 30px;
+      color: #fafbbc;
+    }
+    table {
+      border: 5px solid black;
+    }
+    td {
+      width: 40px;
+      height: 40px;
+      vertical-align:bottom;
+      text-align:center;
+    }
+    button {
+      min-width: 60px;
+      height: 25px;
+    }
+    .info-box p:not(:nth-child(1)) {
+      margin-top: 10px;
+    }
+    .button-box {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<div style="display: flex">
+  <table border="1" id="table"></table>
+  <div style="margin-left: 30px">
+    <div class="info-box">
+      <p><span>Round：</span><span id="round">1</span></p>
+      <p><span>Remaining Treasure：</span><span id="surplus">0</span></p>
+      <p><span>Killer Score：</span><span id="killerScore">0</span></p>
+      <p><span>Player Score：</span><span id="heroScore">0</span></p>
+    </div>
+    <div class="button-box">
+      <button onclick="nextStage()">Next Stage</button>
+      <button onclick="end()">End the Game</button>
+    </div>
+  </div>
+</div>
+
+</body>
+<script src="game.js"></script>
+</html>
